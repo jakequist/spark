@@ -1,0 +1,3 @@
+./dev/change-scala-version.sh 2.11
+mvn -Pyarn -Phadoop-2.4 -Dscala-2.11 -DskipTests clean package
+
