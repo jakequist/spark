@@ -2250,6 +2250,7 @@
             </includes>
           </artifactSet>
           <relocations>
+            
             <relocation>
               <pattern>org.eclipse.jetty</pattern>
               <shadedPattern>org.spark-project.jetty</shadedPattern>
@@ -2257,6 +2258,35 @@
                 <include>org.eclipse.jetty.**</include>
               </includes>
             </relocation>
+            
+            <relocation>
+              <pattern>akka</pattern>
+              <shadedPattern>jq.shadded.akka</shadedPattern>
+              <includes>
+                <include>akka.**</include>
+              </includes>
+            </relocation>
+            
+            <relocation>
+              <pattern>com.fasterxml</pattern>
+              <shadedPattern>jq.shadded.com.fasterxml</shadedPattern>
+              <includes>
+                <include>com.fasterxml.**</include>
+              </includes>
+              <excludes>
+                <exclude>com.fasterxml.jackson.annotation.*</exclude>
+                <exclude>com.fasterxml.jackson.annotation.JsonCreator</exclude>
+              </excludes>
+            </relocation>
+            
+            <relocation>
+              <pattern>akka</pattern>
+              <shadedPattern>jq.shadded.akka</shadedPattern>
+              <includes>
+                <include>akka.**</include>
+              </includes>
+            </relocation>
+            
             <relocation>
               <pattern>com.google.common</pattern>
               <shadedPattern>org.spark-project.guava</shadedPattern>
