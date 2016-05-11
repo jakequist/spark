@@ -1,9 +1,8 @@
 ./dev/change-scala-version.sh 2.11
-mvn -Pyarn -Phadoop-2.4 -Dscala-2.11 -DskipTests clean package
-cp core/target/spark-core_2.11-1.6.1.jar ./
-cp streaming/target/spark-streaming_2.11-1.6.1.jar ./
-cp graphx/target/spark-graphx_2.11-1.6.1.jar ./
-cp mllib/target/spark-mllib_2.11-1.6.1.jar ./
-cp sql/core/target/spark-sql_2.11-1.6.1.jar ./
-cp sql/hive/target/spark-hive_2.11-1.6.1.jar ./
+mvn -pl :spark-core_2.11 -pl :spark-streaming_2.11 -pl :spark-graphx_2.11 -pl :spark-mllib_2.11 -pl :spark-sql_2.11 -Pyarn -Phadoop-2.4 -Dscala-2.11 -DskipTests clean package
+cp core/target/spark-core_2.11-1.6.1-shaded.jar ./
+cp streaming/target/spark-streaming_2.11-1.6.1-shaded.jar ./
+cp graphx/target/spark-graphx_2.11-1.6.1-shaded.jar ./
+cp mllib/target/spark-mllib_2.11-1.6.1-shaded.jar ./
+cp sql/target/spark-sql_2.11-1.6.1-shaded.jar ./
 

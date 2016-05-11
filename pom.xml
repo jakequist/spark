@@ -2279,13 +2279,13 @@
               </excludes>
             </relocation>
             
-            <relocation>
+            <!-- <relocation>
               <pattern>akka</pattern>
               <shadedPattern>jq.shadded.akka</shadedPattern>
               <includes>
                 <include>akka.**</include>
               </includes>
-            </relocation>
+            </relocation> -->
             
             <relocation>
               <pattern>com.google.common</pattern>
