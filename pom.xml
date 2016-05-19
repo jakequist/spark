@@ -159,7 +159,7 @@
     <!-- the producer is used in tests -->
     <aws.kinesis.producer.version>0.10.1</aws.kinesis.producer.version>
     <!--  org.apache.httpcomponents/httpclient-->
-    <commons.httpclient.version>4.3.2</commons.httpclient.version>
+    <commons.httpclient.version>4.5.2</commons.httpclient.version>
     <!--  commons-httpclient/commons-httpclient-->
     <httpclient.classic.version>3.1</httpclient.classic.version>
     <commons.math3.version>3.4.1</commons.math3.version>
@@ -170,7 +170,7 @@
     <jline.version>${scala.version}</jline.version>
     <jline.groupid>org.scala-lang</jline.groupid>
     <codehaus.jackson.version>1.9.13</codehaus.jackson.version>
-    <fasterxml.jackson.version>2.4.4</fasterxml.jackson.version>
+    <fasterxml.jackson.version>2.7.2</fasterxml.jackson.version>
     <snappy.version>1.1.2</snappy.version>
     <netlib.java.version>1.1.2</netlib.java.version>
     <calcite.version>1.2.0-incubating</calcite.version>
@@ -506,7 +506,7 @@
       <dependency>
         <groupId>org.apache.httpcomponents</groupId>
         <artifactId>httpcore</artifactId>
-        <version>${commons.httpclient.version}</version>
+        <version>4.4.4</version>
       </dependency>
       <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
