@@ -1,3 +1,6 @@
-./dev/change-scala-version.sh 2.11
+# ./dev/change-scala-version.sh 2.11
 mvn -Pyarn -Phadoop-2.4 -Dscala-2.11 -DskipTests clean package
 cp assembly/target/scala-2.11/spark-assembly-1.6.1-hadoop2.4.0.jar ../common-spark/lib/
+M=`md5 -q assembly/target/scala-2.11/spark-assembly-1.6.1-hadoop2.4.0.jar`
+aws s3 cp assembly/target/scala-2.11/spark-assembly-1.6.1-hadoop2.4.0.jar s3://scratch.quist.co/spark/spark_1.6.1_$M.jar
+aws s3 cp assembly/target/scala-2.11/spark-assembly-1.6.1-hadoop2.4.0.jar s3://scratch.quist.co/spark/spark_1.6.1.jar
